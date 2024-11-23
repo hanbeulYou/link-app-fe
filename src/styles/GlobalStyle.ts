@@ -36,7 +36,6 @@ const GlobalStyle = createGlobalStyle`
 ㄴ
   a {
     text-decoration: none;
-    color: inherit;
   }
 
   button {
