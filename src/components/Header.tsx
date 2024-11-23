@@ -5,10 +5,6 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 import { Icon } from "./ui/Icon";
 
-interface HeaderProps {
-  hasBackButton?: boolean;
-}
-
 const HeaderContainer = styled.header`
   width: 100%;
   height: fit-content;
@@ -25,7 +21,7 @@ const Title = styled.h1`
   font-weight: ${({ theme }) => theme.fontWeight.bold};
 `;
 
-const Header: React.FC<HeaderProps> = ({ hasBackButton = false }) => {
+const Header: React.FC = () => {
   const navigate = useNavigate();
   const { pathname } = useLocation();
 
@@ -37,11 +33,17 @@ const Header: React.FC<HeaderProps> = ({ hasBackButton = false }) => {
 
   const title = pathToTitle[pathname] || "Page";
 
+  // TODO: 백 버튼 표시 로직 추가
+  const shouldShowBackButton = () => {
+    if (pathname === "/") return false;
+    return true;
+  };
+
   return (
     <HeaderContainer>
       <FlexRow justify="space-between" align="center">
-        <FlexRow align="center">
-          {hasBackButton && (
+        <FlexRow align="center" style={{ gap: "8px" }}>
+          {shouldShowBackButton() && (
             <IconWrapper onClick={() => navigate(-1)}>
               <Icon icon="Back" />
             </IconWrapper>
