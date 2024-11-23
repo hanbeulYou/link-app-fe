@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Navbar from "../Navbar";
+import Header from "../Header";
 
 const PageLayout = styled.div`
   width: 100%;
@@ -28,10 +29,9 @@ const DefaultLayout: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => (
   <PageLayout>
-    {/* <header style={{ marginBottom: "16px" }}>Default Header</header> */}
+    <Header />
     {children}
     <Navbar />
-    {/* <footer style={{ marginTop: "16px" }}>Default Footer</footer> */}
   </PageLayout>
 );
 

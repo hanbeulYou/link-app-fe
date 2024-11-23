@@ -1,8 +1,25 @@
-import { styled } from "styled-components";
+import React from "react";
+import SearchIcon from "@mui/icons-material/Search";
+import NotificationsIcon from "@mui/icons-material/Notifications";
+import DensityMediumIcon from "@mui/icons-material/DensityMedium";
+import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 
-export const Icon = styled.img<{ size?: string }>`
-  width: ${({ size }) => size || "24px"};
-  height: ${({ size }) => size || "24px"};
-  object-fit: contain;
-  display: inline-block;
-`;
+type IconType = "Search" | "Notification" | "Hamburger" | "Back";
+
+interface IconProps {
+  icon: IconType;
+  size?: string;
+}
+
+const iconMap = {
+  Search: SearchIcon,
+  Notification: NotificationsIcon,
+  Hamburger: DensityMediumIcon,
+  Back: KeyboardBackspaceIcon,
+};
+
+export const Icon: React.FC<IconProps> = ({ icon, size = "24px" }) => {
+  const IconComponent = iconMap[icon];
+
+  return <IconComponent sx={{ width: size, height: size }} />;
+};

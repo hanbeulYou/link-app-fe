@@ -12,7 +12,6 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     overflow-x: hidden; 
-    background-color: #f9f9f9; 
     color: #333;
     box-sizing: border-box;
   }
@@ -25,7 +24,7 @@ const GlobalStyle = createGlobalStyle`
     justify-content: center;
     align-items: center;
     overflow: hidden; 
-    background-color: #ffffff; 
+    background-color: #000; 
     overflow-y: auto; 
   }
 
