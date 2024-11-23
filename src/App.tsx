@@ -6,17 +6,48 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import About from "./pages/About";
-import Navbar from "./components/Navbar";
+import { AuthLayout, DefaultLayout } from "./components/layout/PageLayout";
 
 const App: React.FC = () => (
   <ThemeProvider theme={theme}>
     <GlobalStyle />
     <BrowserRouter>
-      <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="*" element={<NotFound />} />
+        <Route
+          path="/"
+          element={
+            <DefaultLayout>
+              <Home />
+            </DefaultLayout>
+          }
+        />
+        <Route
+          path="/about"
+          element={
+            <DefaultLayout>
+              <About />
+            </DefaultLayout>
+          }
+        />
+
+        {/* Auth Layout 적용 */}
+        <Route
+          path="/login"
+          element={
+            <AuthLayout>
+              <div>Login</div>
+            </AuthLayout>
+          }
+        />
+
+        <Route
+          path="*"
+          element={
+            <DefaultLayout>
+              <NotFound />
+            </DefaultLayout>
+          }
+        />
       </Routes>
     </BrowserRouter>
   </ThemeProvider>

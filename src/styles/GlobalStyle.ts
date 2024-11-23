@@ -5,21 +5,36 @@ import reset from "styled-reset";
 const GlobalStyle = createGlobalStyle`
   ${reset}
 
-  html, body, #root {
+  html, body {
     width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
     font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    background-color: #f9fafb;
+    overflow-x: hidden; 
+    background-color: #f9f9f9; 
     color: #333;
     box-sizing: border-box;
   }
 
-  *, *::before, *::after {
-    box-sizing: inherit;
+  #root {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+    background-color: #ffffff; 
+    overflow-y: auto; 
   }
 
+  *, *::before, *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+  }
+ㄴ
   a {
     text-decoration: none;
     color: inherit;
