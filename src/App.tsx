@@ -1,12 +1,12 @@
-import React from "react";
-import { ThemeProvider } from "styled-components";
-import GlobalStyle from "./styles/GlobalStyle";
-import theme from "./styles/theme";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./pages/Home";
-import NotFound from "./pages/NotFound";
-import About from "./pages/About";
-import { AuthLayout, DefaultLayout } from "./components/layout/PageLayout";
+// import React from "react";
+// import { ThemeProvider } from "styled-components";
+// import GlobalStyle from "./styles/GlobalStyle";
+// import theme from "./styles/theme";
+// import { BrowserRouter, Route, Routes } from "react-router-dom";
+// import Home from "./pages/Home";
+// import NotFound from "./pages/NotFound";
+// import About from "./pages/About";
+// import { AuthLayout, DefaultLayout } from "./components/layout/PageLayout";
 
 const App: React.FC = () => (
   <div style={{ width: "100%", height: "100%", backgroundColor: "aqua" }}>
