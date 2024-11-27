@@ -6,16 +6,9 @@ interface CardProps {
   brand: string;
   item: string;
   price: string;
-  description: string;
 }
 
-export const Card: React.FC<CardProps> = ({
-  imageUrl,
-  brand,
-  item,
-  price,
-  description,
-}) => {
+export const Card: React.FC<CardProps> = ({ imageUrl, brand, item, price }) => {
   return (
     <CardContainer>
       <ImageContainer>
@@ -25,7 +18,7 @@ export const Card: React.FC<CardProps> = ({
         <Brand>{brand}</Brand>
         <Item>{item}</Item>
         <Price>{price}</Price>
-        <Description>{description}</Description>
+        {/* <Description>{description}</Description> */}
       </ContentContainer>
     </CardContainer>
   );

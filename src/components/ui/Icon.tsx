@@ -9,6 +9,7 @@ import PersonIcon from "@mui/icons-material/Person";
 import ReplyIcon from "@mui/icons-material/Reply";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import SwapVertIcon from "@mui/icons-material/SwapVert";
+import EditIcon from "@mui/icons-material/Edit";
 
 type IconType =
   | "Search"
@@ -20,7 +21,8 @@ type IconType =
   | "Person"
   | "Share"
   | "More"
-  | "Sort";
+  | "Sort"
+  | "Edit";
 
 interface IconProps {
   icon: IconType;
@@ -38,6 +40,7 @@ const iconMap = {
   Share: ReplyIcon,
   More: MoreVertIcon,
   Sort: SwapVertIcon,
+  Edit: EditIcon,
 };
 
 export const Icon: React.FC<IconProps> = ({ icon, size = "24px" }) => {

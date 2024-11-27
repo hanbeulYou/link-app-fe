@@ -48,48 +48,13 @@ const Home: React.FC = () => {
           </FilterButton>
         </ContentFilter>
         <Grid minWidth="84px">
-          <Card
-            brand={"test"}
-            item={"test"}
-            price={"test"}
-            description={"test"}
-          />
-          <Card
-            brand={"test2"}
-            item={"test2"}
-            price={"test2"}
-            description={"test2"}
-          />
-          <Card
-            brand={"test3"}
-            item={"test3"}
-            price={"test3"}
-            description={"test3"}
-          />
-          <Card
-            brand={"test3"}
-            item={"test3"}
-            price={"test3"}
-            description={"test3"}
-          />
-          <Card
-            brand={"test3"}
-            item={"test3"}
-            price={"test3"}
-            description={"test3"}
-          />
-          <Card
-            brand={"test3"}
-            item={"test3"}
-            price={"test3"}
-            description={"test3"}
-          />
-          <Card
-            brand={"test3"}
-            item={"test3"}
-            price={"test3"}
-            description={"test3"}
-          />
+          <Card brand={"test"} item={"test"} price={"test"} />
+          <Card brand={"test2"} item={"test2"} price={"test2"} />
+          <Card brand={"test3"} item={"test3"} price={"test3"} />
+          <Card brand={"test3"} item={"test3"} price={"test3"} />
+          <Card brand={"test3"} item={"test3"} price={"test3"} />
+          <Card brand={"test3"} item={"test3"} price={"test3"} />
+          <Card brand={"test3"} item={"test3"} price={"test3"} />
         </Grid>
       </ContentContainer>
     </Container>

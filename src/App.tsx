@@ -5,8 +5,8 @@ import theme from "./styles/theme";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
-import About from "./pages/About";
 import { AuthLayout, DefaultLayout } from "./components/layout/PageLayout";
+import Detail from "./pages/Detail";
 
 const App: React.FC = () => (
   <ThemeProvider theme={theme}>
@@ -22,10 +22,10 @@ const App: React.FC = () => (
           }
         />
         <Route
-          path="/about"
+          path="/detail"
           element={
             <DefaultLayout>
-              <About />
+              <Detail />
             </DefaultLayout>
           }
         />
