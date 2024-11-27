@@ -6,6 +6,9 @@ import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import HomeIcon from "@mui/icons-material/Home";
 import AddCircleIcon from "@mui/icons-material/AddCircle";
 import PersonIcon from "@mui/icons-material/Person";
+import ReplyIcon from "@mui/icons-material/Reply";
+import MoreVertIcon from "@mui/icons-material/MoreVert";
+import SwapVertIcon from "@mui/icons-material/SwapVert";
 
 type IconType =
   | "Search"
@@ -14,7 +17,10 @@ type IconType =
   | "Back"
   | "Home"
   | "Add"
-  | "Person";
+  | "Person"
+  | "Share"
+  | "More"
+  | "Sort";
 
 interface IconProps {
   icon: IconType;
@@ -29,10 +35,21 @@ const iconMap = {
   Home: HomeIcon,
   Add: AddCircleIcon,
   Person: PersonIcon,
+  Share: ReplyIcon,
+  More: MoreVertIcon,
+  Sort: SwapVertIcon,
 };
 
 export const Icon: React.FC<IconProps> = ({ icon, size = "24px" }) => {
   const IconComponent = iconMap[icon];
 
-  return <IconComponent sx={{ width: size, height: size }} />;
+  return (
+    <IconComponent
+      sx={{
+        width: size,
+        height: size,
+        transform: icon === "Share" ? "scaleX(-1)" : "none",
+      }}
+    />
+  );
 };
