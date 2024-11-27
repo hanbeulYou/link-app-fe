@@ -9,6 +9,7 @@ const theme = {
     background: "#f9fafb",
     textPrimary: "#111827",
     textSecondary: "#6b7280",
+    white: "#ffffff",
   },
   fonts: {
     body: [
