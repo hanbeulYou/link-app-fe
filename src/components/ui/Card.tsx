@@ -18,7 +18,6 @@ export const Card: React.FC<CardProps> = ({ imageUrl, brand, item, price }) => {
         <Brand>{brand}</Brand>
         <Item>{item}</Item>
         <Price>{price}</Price>
-        {/* <Description>{description}</Description> */}
       </ContentContainer>
     </CardContainer>
   );
@@ -70,16 +69,6 @@ const Item = styled.span`
 const Price = styled.span`
   display: block;
   font-size: 10px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  margin-top: 4px;
-`;
-
-const Description = styled.span`
-  display: block;
-  font-size: 10px;
-  color: #666;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
